@@ -1,0 +1,46 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "Los Goonies",
+      "director": "Tigre de Bengala",
+      "sinopsis": "Slot encuentra amigos",
+      "fecha": "12/12/1990"
+    },
+    {
+      "titulo": "Los Goonies",
+      "director": "mono",
+      "sinopsis": "Slot ha encontrado nuevos amigos",
+      "fecha": "01/04/1990",
+      "id": 3
+    },
+    {
+      "titulo": "Cambio de peli",
+      "director": "por esta otra",
+      "sinopsis": "que ya veras",
+      "fecha": "11/16/2016",
+      "id": 4
+    },
+    {
+      "titulo": "fasdf",
+      "director": "faewf",
+      "sinopsis": "wfef",
+      "fecha": "11/02/2016",
+      "id": 25
+    },
+    {
+      "titulo": "fli",
+      "director": "ewfrwefwe",
+      "sinopsis": "fwefw",
+      "fecha": "11/30/2016",
+      "id": 26
+    },
+    {
+      "titulo": "La definitiva",
+      "director": "qweoqwopi",
+      "sinopsis": "eqwopreqwio",
+      "fecha": "12/08/2016",
+      "id": 29
+    }
+  ]
+}
