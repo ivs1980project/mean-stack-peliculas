@@ -17,6 +17,7 @@ function selectRow(){
     //Eliminamos las anteriores clases seleccionadas
     clearRowSelected();
     $(this).addClass('row-selected');
+    $(this).css("background-color", "#ff0");
     showInForm($('.row-selected').find('.td-titulo').text(),$('.row-selected').find('.td-director').text(),
         $('.row-selected').find('.td-sinopsis').text(),$('.row-selected').find('.td-fecha').text());
     
@@ -25,6 +26,7 @@ function selectRow(){
 function clearRowSelected(){
     $('#table-body .film-row').each(function(){
         $(this).removeClass('row-selected');
+        $(this).css("background-color", "#fff");
     });
 }
 
@@ -69,7 +71,7 @@ function peticionAjaxPut(rowToModify){
         dataType:"json",
         //URL de comunicacion con el servicio
         url: "http://localhost:3000/peliculas/"+rowToModify
-    }).done(peticionCompletada).fail(peticionFallida);
+    }).done(peticionCompletadaNoReload).fail(peticionFallida);
 }
 
 function peticionAjaxPost(){
@@ -102,7 +104,7 @@ function peticionAjaxGet(){
     }).done(peticionCompletada).fail(peticionFallida);
 }
 
-function peticionAjaxDelete(number){
+function peticionAjaxDelete(rowToDelete){
     $.ajax({
         //Puede ser una cadena, un array o un object de JS
         data: {},
@@ -112,8 +114,8 @@ function peticionAjaxDelete(number){
         // tipo de dato esperado
         dataType:"json",
         //URL de comunicacion con el servicio
-        url: "http://localhost:3000/peliculas/"+number
-    }).done(peticionCompletadaDelete).fail(peticionFallida);
+        url: "http://localhost:3000/peliculas/"+rowToDelete
+    }).done(peticionCompletadaNoReload).fail(peticionFallida);
 }
 
 function peticionCompletada(data, status){
@@ -122,7 +124,7 @@ function peticionCompletada(data, status){
     jsonToRowData(data);
 }
 
-function peticionCompletadaDelete(data, status){
+function peticionCompletadaNoReload(data, status){
     alert("Peticion completada delete con status : " +status + ": "+data);
 }
 
