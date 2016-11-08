@@ -1,46 +1,53 @@
 {
   "peliculas": [
     {
-      "id": 1,
       "titulo": "Los Goonies",
       "director": "Tigre de Bengala",
       "sinopsis": "Slot encuentra amigos",
-      "fecha": "12/12/1990"
+      "fecha": "12/12/1990",
+      "id": 1
     },
     {
-      "titulo": "Los Goonies",
-      "director": "mono",
-      "sinopsis": "Slot ha encontrado nuevos amigos",
-      "fecha": "01/04/1990",
+      "titulo": "Titulo 2",
+      "director": "El director de la peli",
+      "sinopsis": "No es muy buena",
+      "fecha": "11/26/2016",
       "id": 3
     },
     {
-      "titulo": "Cambio de peli",
-      "director": "por esta otra",
-      "sinopsis": "que ya veras",
-      "fecha": "11/16/2016",
-      "id": 4
+      "titulo": "Terminator",
+      "director": "Uno de alli",
+      "sinopsis": "Sayonara baby",
+      "fecha": "11/08/2016",
+      "id": 6
     },
     {
-      "titulo": "fasdf",
-      "director": "faewf",
-      "sinopsis": "wfef",
-      "fecha": "11/02/2016",
-      "id": 25
+      "titulo": "Terminator 2",
+      "director": "eqwdwe3454",
+      "sinopsis": "owefjew543534",
+      "fecha": "11/08/2016",
+      "id": 7
     },
     {
-      "titulo": "fli",
-      "director": "ewfrwefwe",
-      "sinopsis": "fwefw",
+      "titulo": "Rambo 2",
+      "director": "eqwdwe3454",
+      "sinopsis": "Las piernas de otro",
+      "fecha": "11/08/2016",
+      "id": 9
+    },
+    {
+      "titulo": "El hobbit",
+      "director": "Richard",
+      "sinopsis": "Bilbo aqui no es una ciudad",
+      "fecha": "02/01/2017",
+      "id": 10
+    },
+    {
+      "titulo": "Titulo 45",
+      "director": "El director de la peli",
+      "sinopsis": "No es muy buena",
       "fecha": "11/30/2016",
-      "id": 26
-    },
-    {
-      "titulo": "La definitiva",
-      "director": "qweoqwopi",
-      "sinopsis": "eqwopreqwio",
-      "fecha": "12/08/2016",
-      "id": 29
+      "id": 11
     }
   ]
 }
