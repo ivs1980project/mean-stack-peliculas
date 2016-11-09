@@ -26,3 +26,6 @@ contenedor-tabla{
     background: linear-gradient(#cedce7 0%, #596a72 100%); /* FF3.6-15 */  /* Chrome10-25,Safari5.1-6 */  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
 }
+.row-selected {
+    background-color: #000;
+}

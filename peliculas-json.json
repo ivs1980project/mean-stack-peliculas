@@ -23,7 +23,7 @@
     },
     {
       "titulo": "Terminator 2",
-      "director": "eqwdwe3454",
+      "director": "Uno que pasaba",
       "sinopsis": "owefjew543534",
       "fecha": "11/08/2016",
       "id": 7
@@ -36,18 +36,11 @@
       "id": 9
     },
     {
-      "titulo": "El hobbit",
+      "titulo": "El hobbit 3",
       "director": "Richard",
       "sinopsis": "Bilbo aqui no es una ciudad",
       "fecha": "02/01/2017",
       "id": 10
-    },
-    {
-      "titulo": "Titulo 45",
-      "director": "El director de la peli",
-      "sinopsis": "No es muy buena",
-      "fecha": "11/30/2016",
-      "id": 11
     }
   ]
 }
