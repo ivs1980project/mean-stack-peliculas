@@ -1,12 +1,15 @@
 <h1>PELICULAS CON ANGULAR</h1>
 <table border="1" id="film-table">
-        <tr>
-            <th class="header-columna">Id</th>
-            <th class="header-columna">T&iacute;tulo</th>
-            <th class="header-columna">Director</th>
-            <th class="header-columna">Fecha</th>
-         </tr>
-         <!--
+	<thead>
+		<tr>
+			<th class="header-columna" ng-click="setOrder()">Id</th>
+			<th class="header-columna" onclick="setOrder()">T&iacute;tulo</th>
+			<th class="header-columna">Director</th>
+			<th class="header-columna">Fecha</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!--
          <tr ng-repeat="film in filmStore">
             <td>{{film.id}}</td>
             <td>{{film.titulo}}</td>
@@ -14,11 +17,11 @@
             <td>{{film.anio}}</td>
          </tr>
          -->
-         <tr *ngFor="let film of filmStore">
-            <td>{{film.id}}</td>
-            <td>{{film.titulo}}</td>
-            <td>{{film.autor}}</td>
-            <td>{{film.anio}}</td>
-         </tr>
+		<tr *ngFor="let film of filmStore">
+			<td>{{film.id}}</td>
+			<td>{{film.titulo}}</td>
+			<td>{{film.autor}}</td>
+			<td>{{film.anio}}</td>
+		</tr>
+	</tbody>
 </table>
-
