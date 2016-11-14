@@ -25,4 +25,8 @@ export class Film {
     getAnio(): number {
         return this.anio;
     }
+    getId(): number {
+        return this.id;
+    }
+
 }

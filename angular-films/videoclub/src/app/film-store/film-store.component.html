@@ -2,10 +2,10 @@
 <table border="1" id="film-table">
 	<thead>
 		<tr>
-			<th class="header-columna" ng-click="setOrder()">Id</th>
-			<th class="header-columna" onclick="setOrder()">T&iacute;tulo</th>
-			<th class="header-columna">Director</th>
-			<th class="header-columna">Fecha</th>
+			<th class="header-columna" (click)="setOrder('id')">Id</th>
+			<th class="header-columna" (click)="setOrder('titulo')">T&iacute;tulo</th>
+			<th class="header-columna" (click)="setOrder('director')">Director</th>
+			<th class="header-columna" (click)="setOrder('fecha')">Fecha</th>
 		</tr>
 	</thead>
 	<tbody>
