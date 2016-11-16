@@ -1,11 +1,37 @@
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <h1>PELICULAS CON ANGULAR</h1>
 <table border="1" id="film-table">
 	<thead>
 		<tr>
-			<th class="header-columna" (click)="setOrder('id')">Id</th>
-			<th class="header-columna" (click)="setOrder('titulo')">T&iacute;tulo</th>
-			<th class="header-columna" (click)="setOrder('director')">Director</th>
-			<th class="header-columna" (click)="setOrder('fecha')">Fecha</th>
+			<!--<td class="header-columna" (click)="setOrder('id')">Id</td>
+			<td class="header-columna" (click)="setOrder('titulo')">T&iacute;tulo</th>
+			<td class="header-columna" (click)="setOrder('director')">Director</th>
+			<td class="header-columna" (click)="setOrder('fecha')">Fecha</th>
+			-->
+			<td>
+				<a href="#" (click)="setOrder('id'); sortReverse = !sortReverse">Id
+            	<span ng-show="sortType == 'id' && !sortReverse" class="fa fa-caret-down"></span>
+            	<span ng-show="sortType == 'id' && sortReverse" class="fa fa-caret-up"></span>
+         		</a>
+			</td>
+			<td>
+				<a href="#" (click)="setOrder('titulo'); sortReverse = !sortReverse">Titulo
+            	<span ng-show="sortType == 'titulo' && !sortReverse" class="fa fa-caret-down"></span>
+           		<span ng-show="sortType == 'titulo' && sortReverse" class="fa fa-caret-up"></span>
+         		</a>
+			</td>
+			<td>
+				<a href="#" (click)="setOrder('director'); sortReverse = !sortReverse">Director
+            	<span ng-show="sortType == 'director' && !sortReverse" class="fa fa-caret-down"></span>
+            	<span ng-show="sortType == 'director' && sortReverse" class="fa fa-caret-up"></span>
+         		</a>
+			</td>
+			<td>
+				<a href="#" (click)="setOrder('fecha'); sortReverse = !sortReverse">Fecha
+            	<span ng-show="sortType == 'fecha' && !sortReverse" class="fa fa-caret-down"></span>
+            	<span ng-show="sortType == 'fecha' && sortReverse" class="fa fa-caret-up"></span>
+         		</a>
+			</td>
 		</tr>
 	</thead>
 	<tbody>
