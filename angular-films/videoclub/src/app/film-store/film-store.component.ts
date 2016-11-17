@@ -42,6 +42,7 @@ export class FilmStoreComponent implements OnInit {
     console.log("click en el " + orden);
     console.log(this.filmStore);
   }
+  
 
   createNewFilmStore(): Film[] {
     let film1: Film = new Film(1, "Los Gonnies", "Arnold", 1990);
