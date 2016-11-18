@@ -52,7 +52,6 @@ export class FilmService {
       }
     });
     console.log("click en el " + orden + " tipo " + tipo);
-    console.log(this.filmStore);
   }
 
   createNewFilmStore(): Film[] {
