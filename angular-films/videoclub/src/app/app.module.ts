@@ -17,6 +17,6 @@ import { FilmStoreComponent } from './film-store/film-store.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent,FilmStoreComponent]
+  bootstrap: [FilmStoreComponent]
 })
 export class AppModule { }
