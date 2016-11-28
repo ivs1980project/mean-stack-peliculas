@@ -1,0 +1,43 @@
+<table id="film-table" class="table table-striped table-bordered table-hover table-condensed">
+	<thead>
+		<tr>
+			<!--<td class="header-columna" (click)="setOrder('id')">Id</td>
+			<td class="header-columna" (click)="setOrder('titulo')">T&iacute;tulo</th>
+			<td class="header-columna" (click)="setOrder('director')">Director</th>
+			<td class="header-columna" (click)="setOrder('fecha')">Fecha</th>
+			-->
+			<td>Id
+				<span (click)="setOrder('id', 'down')" class="fa fa-caret-down fa-2x colocar"></span>
+				<span (click)="setOrder('id', 'up')" class="fa fa-caret-up fa-2x colocar"></span>
+			</td>
+			<td>Titulo
+				<span (click)="setOrder('titulo', 'down')" class="fa fa-caret-down fa-2x"></span>
+				<span (click)="setOrder('titulo', 'up')" class="fa fa-caret-up fa-2x"></span>
+			</td>
+			<td>Director
+				<span (click)="setOrder('director', 'down')" class="fa fa-caret-down fa-2x"></span>
+				<span (click)="setOrder('director', 'up')" class="fa fa-caret-up fa-2x"></span>
+			</td>
+			<td>Fecha
+				<span (click)="setOrder('fecha', 'down')" class="fa fa-caret-down fa-2x"></span>
+				<span (click)="setOrder('fecha', 'up')" class="fa fa-caret-up fa-2x"></span>
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		<!--
+         <tr ng-repeat="film in filmStore">
+            <td>{{film.id}}</td>
+            <td>{{film.titulo}}</td>
+            <td>{{film.autor}}</td>
+            <td>{{film.anio}}</td>
+         </tr>
+         -->
+		<tr *ngFor="let film of filmStore">
+			<td>{{film.id}}</td>
+			<td>{{film.titulo}}</td>
+			<td>{{film.autor}}</td>
+			<td>{{film.anio}}</td>
+		</tr>
+	</tbody>
+</table>
