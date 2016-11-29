@@ -6,12 +6,12 @@
   <app-film-table>Loading...</app-film-table>
 -->
 
-<form #form="ngForm" (ngSubmit)="enviarFormulario(form.value)" class="form-horizontal" role="form">
+<form #form="ngForm" class="form-horizontal" role="form">
 	<div class="form-group">
 		<label for="titulo" class="col-sm-2 control-label">Titulo</label>
 		<div class="col-sm-10">
-			<input type="text" class="form-control" placeholder="Introduzca titulo" pattern="/[0-9]{7,8}[A-Z]+/" #titulo="ngModel" name="titulo"
-				[(ngModel)]="film.titulo" required/>
+			<input type="text" class="form-control" id="form-titulo" placeholder="Introduzca titulo" pattern="/[0-9]{7,8}[A-Z]+/" #titulo="ngModel"
+				name="titulo" [(ngModel)]="film.titulo" required/>
 		</div>
 	</div>
 	<div class="form-group">

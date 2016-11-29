@@ -15,16 +15,18 @@ export class FilmService {
   }
 
   addFilm(film) {
-    film.id = this.id++;
-    this.filmStore.push(film);
+    //film.id = this.id++;
+    //this.filmStore.push(film);
 
-    //    this.filmStore.push(new Film(this.id++, film.titulo, film.autor, film.anio));
+    this.filmStore.push(new Film(this.id++, film.titulo, film.autor, film.anio));
   }
 
   deleteFilm(film) {
     let filmToDeletePosition = this.searchFilm(film);
     if (filmToDeletePosition != null) {
       this.filmStore.splice(filmToDeletePosition, 1);
+    } else {
+      console.log("No existe en el videoclub la pelicula " + film);
     }
   }
 
@@ -34,6 +36,8 @@ export class FilmService {
     if (filmToModifyPosition != null) {
       this.filmStore.splice(filmToModifyPosition, 1);
       this.filmStore.push(film);
+    } else {
+      console.log("No existe en el videoclub la pelicula " + film);
     }
   }
 

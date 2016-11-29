@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Film } from '../modelo/film';
 import { FilmService } from '../servicios/film.service';
 
@@ -20,11 +20,12 @@ export class FilmStoreComponent implements OnInit {
   ngOnInit() {
   }
 
+
   addFilm(film) {
     this.filmService.addFilm(film);
   }
   deleteFilm(film) {
-    film.id = 2;
+    //film.id = 2;
     this.filmService.deleteFilm(film);
   }
   modifyFilm(film) {
@@ -37,7 +38,10 @@ export class FilmStoreComponent implements OnInit {
   }
 
   onRowClick(film) {
+
     console.log(film);
+    this.filmService.deleteFilm(film);
+
   }
 
   /*  setOrder(orden, tipo) {
