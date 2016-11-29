@@ -10,8 +10,11 @@ import { FilmService } from '../servicios/film.service';
 })
 export class FilmStoreComponent implements OnInit {
   filmStore: Film[];
+  film: Film;
+
   constructor(private filmService: FilmService) {
     this.filmStore = this.filmService.filmStore;
+    this.film = this.filmService.film;
   }
 
   ngOnInit() {
@@ -21,13 +24,20 @@ export class FilmStoreComponent implements OnInit {
     this.filmService.addFilm(film);
   }
   deleteFilm(film) {
+    film.id = 2;
     this.filmService.deleteFilm(film);
   }
-  searchFilm(film) {
-    this.filmService.searchFilm(film);
+  modifyFilm(film) {
+    film.id = 3;
+    film.titulo = "otroTituloMas";
+    this.filmService.modifyFilm(film);
   }
   setOrder(orden, tipo) {
     this.filmService.setOrder(orden, tipo);
+  }
+
+  onRowClick(film) {
+    console.log(film);
   }
 
   /*  setOrder(orden, tipo) {

@@ -5,15 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { FilmStoreComponent } from './film-store/film-store.component';
-import { FilmTableComponent } from './film-table/film-table.component';
-import { FilmFormComponent } from './film-form/film-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilmStoreComponent,
-    FilmTableComponent,
-    FilmFormComponent
+    FilmStoreComponent
   ],
   imports: [
     BrowserModule,
