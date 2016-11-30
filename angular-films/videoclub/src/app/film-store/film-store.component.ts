@@ -21,6 +21,7 @@ export class FilmStoreComponent implements OnInit {
   }
 
 
+
   addFilm(film) {
     this.filmService.addFilm(film);
   }

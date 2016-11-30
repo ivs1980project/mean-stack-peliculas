@@ -4,7 +4,7 @@ export class Film {
         private autor: string, private anio: number) {
     }
     toString(): string {
-        return "Libro: \n\tTitulo: " + this.titulo +
+        return "Pelicula: \n\tTitulo: " + this.titulo +
             "\n\tAutor: " + this.autor + "\n\tAnio: " + this.anio;
     }
     setTitulo(titulo: string): void {

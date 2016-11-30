@@ -1,9 +1,11 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <h1>PELICULAS CON ANGULAR</h1>
+<span let film hidden="true"></span>
+<app-film-form [film]="film">Loading...</app-film-form>
 
-<!--  <app-film-form>Loading...</app-film-form>
-  <app-film-table>Loading...</app-film-table>
+
+<!--    <app-film-table>Loading...</app-film-table>
 -->
 
 <form #form="ngForm" class="form-horizontal" role="form">
@@ -38,8 +40,6 @@
 </form>
 
 
-
-
 <table id="film-table" class="table table-striped table-bordered table-hover table-condensed">
 	<thead>
 		<tr>
@@ -62,11 +62,12 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let film of filmStore" (click)="onRowClick(film)">
-			<td>{{film.id}}</td>
-			<td>{{film.titulo}}</td>
-			<td>{{film.autor}}</td>
-			<td>{{film.anio}}</td>
+		<tr *ngFor="let filmActual of filmStore" (click)="onRowClick(film)">
+			<td>{{filmActual.id}}</td>
+			<td>{{filmActual.titulo}}</td>
+			<td>{{filmActual.autor}}</td>
+			<td>{{filmActual.anio}}</td>
 		</tr>
+
 	</tbody>
 </table>
