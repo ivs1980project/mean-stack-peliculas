@@ -25,12 +25,11 @@ export class FilmStoreComponent implements OnInit {
     this.filmService.addFilm(film);
   }
   deleteFilm(film) {
-    //film.id = 2;
+    this.film = film;
     this.filmService.deleteFilm(film);
   }
   modifyFilm(film) {
-    film.id = 3;
-    film.titulo = "otroTituloMas";
+    this.film = film;
     this.filmService.modifyFilm(film);
   }
   setOrder(orden, tipo) {
@@ -40,7 +39,8 @@ export class FilmStoreComponent implements OnInit {
   onRowClick(film) {
 
     console.log(film);
-    this.filmService.deleteFilm(film);
+    this.film = film;
+    //    this.filmService.deleteFilm(film);
 
   }
 
