@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { FilmStoreComponent } from './film-store/film-store.component';
 import { FilmFormComponent } from './film-form/film-form.component';
+import { FilmTableComponent } from './film-table/film-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmStoreComponent,
-    FilmFormComponent
+    FilmFormComponent,
+    FilmTableComponent
   ],
   imports: [
     BrowserModule,

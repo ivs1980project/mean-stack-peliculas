@@ -20,8 +20,6 @@ export class FilmStoreComponent implements OnInit {
   ngOnInit() {
   }
 
-
-
   addFilm(film) {
     this.filmService.addFilm(film);
   }
@@ -38,11 +36,8 @@ export class FilmStoreComponent implements OnInit {
   }
 
   onRowClick(film) {
-
     console.log(film);
     this.film = film;
-    //    this.filmService.deleteFilm(film);
-
   }
 
   /*  setOrder(orden, tipo) {

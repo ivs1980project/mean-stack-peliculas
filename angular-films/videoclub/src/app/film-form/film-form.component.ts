@@ -19,4 +19,14 @@ export class FilmFormComponent implements OnInit {
 
   }
 
+  addFilm(film) {
+    //TODO:mandar el objeto film al padre
+  }
+  deleteFilm(film) {
+    //TODO:mandar el objeto film al padre
+  }
+  modifyFilm(film) {
+    //TODO:mandar el objeto film al padre
+  }
+
 }
