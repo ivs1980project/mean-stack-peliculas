@@ -20,6 +20,32 @@ export class FilmStoreComponent implements OnInit {
   ngOnInit() {
   }
 
+  addFilm(filmReceived) {
+    this.filmService.addFilm(filmReceived);
+    console.log("Evento add recibido!");
+  }
+  deleteFilm(filmReceived) {
+    this.film = filmReceived;
+    this.filmService.deleteFilm(filmReceived);
+    console.log("Evento delete recibido!");
+  }
+  modifyFilm(filmReceived) {
+    this.film = filmReceived;
+    this.filmService.modifyFilm(filmReceived);
+    console.log("Evento modiy recibido!");
+  }
+  setOrder(orderCriteria) {
+    console.log("Evento setOrder recibido!");
+    this.filmService.setOrder(orderCriteria[0], orderCriteria[1]);
+  }
+
+  onRowClick(filmReceived) {
+    console.log("Evento onRowClick recibido!");
+    console.log(filmReceived);
+    this.film = filmReceived;
+  }
+
+  /*
   addFilm(film) {
     this.filmService.addFilm(film);
   }
@@ -39,7 +65,7 @@ export class FilmStoreComponent implements OnInit {
     console.log(film);
     this.film = film;
   }
-
+*/
   /*  setOrder(orden, tipo) {
       this.filmService.filmStore.sort(function (a, b) {
         switch (orden) {

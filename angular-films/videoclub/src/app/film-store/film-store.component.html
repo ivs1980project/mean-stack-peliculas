@@ -1,10 +1,10 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <h1>PELICULAS CON ANGULAR</h1>
-<app-film-form [film]="film">Loading...</app-film-form>
-<app-film-table [filmStore]="filmStore">Loading...</app-film-table>
+<app-film-form [film]="film" (eventAddFilm)="addFilm($event)" (eventDeleteFilm)="deleteFilm($event)" (eventModifyFilm)="modifyFilm($event)">Loading...</app-film-form>
+<app-film-table [filmStore]="filmStore" (eventRowClickFilm)="onRowClick($event)" (eventOrderFilmTable)="setOrder($event)">Loading...</app-film-table>
 
-
+<!--
 <form #form="ngForm" class="form-horizontal" role="form">
 	<div class="form-group">
 		<label for="titulo" class="col-sm-2 control-label">Titulo</label>
@@ -68,3 +68,4 @@
 
 	</tbody>
 </table>
+-->

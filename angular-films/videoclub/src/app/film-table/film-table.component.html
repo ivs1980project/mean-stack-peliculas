@@ -20,7 +20,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let filmActual of filmStore" (click)="onRowClick(film)">
+    <tr *ngFor="let filmActual of filmStore" (click)="onRowClick(filmActual)">
       <td>{{filmActual.id}}</td>
       <td>{{filmActual.titulo}}</td>
       <td>{{filmActual.autor}}</td>
