@@ -1,6 +1,17 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+//conexion a la base de datos
+mongoose.connect("mongodb://localhost/peliculas");
+
+var Pelicula = mongoose.model("Pelicula", {
+    titulo: String,
+    director: String,
+    sinopsis: String,
+    fecha: String,
+    id: Number
+});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -29,6 +40,21 @@ routerRest.route("/peliculas")
         response.send(data.peliculas);
     }).post((request, response) => {
         //Recoger la informacion del body para crear una nueva peli
+        var peli = new Pelicula(
+            {
+                titulo: request.body.titulo,
+                director: request.body.director,
+                sinopsis: request.body.sinopsis,
+                fecha: request.body.fecha
+            });
+        peli.save((error) => {
+            if (error) {
+                console.error("Error al guardar: ", error);
+            } else {
+                console.log("Guardado correctamente");
+            }
+        })
+
         console.log(request.body);
         response.json({ message: "correcto" });
     });
