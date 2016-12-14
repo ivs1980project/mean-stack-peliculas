@@ -1,0 +1,19 @@
+{
+  "name": "mean-stack-peliculas",
+  "version": "1.0.0",
+  "description": "App de gestion de peliculas",
+  "main": "server-xpress.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivs1980project/mean-stack-peliculas.git"
+  },
+  "author": "ivanvalero1980@yahoo.es",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivs1980project/mean-stack-peliculas/issues"
+  },
+  "homepage": "https://github.com/ivs1980project/mean-stack-peliculas#readme"
+}
