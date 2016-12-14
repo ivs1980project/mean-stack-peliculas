@@ -45,8 +45,8 @@ function selectRow() {
     //Eliminamos las anteriores clases seleccionadas
     clearRowSelected();
     //TODO:Crear una clase row selected que incluya el color de background
-    $(this).addClass('.row-selected');
-    //$(this).css("background-color", "#ff0");
+    $(this).addClass('row-selected');
+    $(this).css("background-color", "#ff0");
     //Mostramos en el formulario la fila seleccionada de la tabla
     showInForm($('.row-selected').find('.td-titulo').text(), $('.row-selected').find('.td-director').text(),
         $('.row-selected').find('.td-sinopsis').text(), $('.row-selected').find('.td-fecha').text());
@@ -56,8 +56,8 @@ function selectRow() {
 function clearRowSelected() {
     //TODO:Crear una clase row selected que incluya el color de background
     $('#table-body .film-row').each(function () {
-        $(this).removeClass('.row-selected');
-        //$(this).css("background-color", "#fff");
+        $(this).removeClass('row-selected');
+        $(this).css("background-color", "#fff");
     });
 }
 
@@ -81,9 +81,9 @@ function peticionAjaxPost() {
 
     $.ajax({
         //Puede ser una cadena, un array o un object de JS
-        data: { titulo: "Los Goonies", director: "mono", sinopsis: "Slot ha encontrado nuevos amigos", fecha: "01/04/1990" },
+        //data: {titulo:"Los Goonies",director:"mono",sinopsis:"Slot ha encontrado nuevos amigos", fecha:"01/04/1990"},
         //data:{},
-        //data: createFilmData(),
+        data: createFilmData(),
         //Tipo de peticion
         type: "POST",
         // tipo de dato esperado
